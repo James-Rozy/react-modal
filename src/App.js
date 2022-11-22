@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import Modal from './components/Modal';
 import './styles/styles.css';
+import Modal from './components/Modal';
+import Header from './components/Header';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className='container'>
-      <header>
+      <Header>
         <h1>React Modal Prototype</h1>
-      </header>
+      </Header>
 
       <div className='content'>
         <div className='btn-wrapper'>
@@ -16,9 +17,7 @@ const App = () => {
             Open Modal
           </button>
 
-          <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-            Here is a modal!
-          </Modal>
+          <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </div>
       </div>
     </div>
