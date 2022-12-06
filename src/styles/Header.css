@@ -1,0 +1,73 @@
+.page-header {
+  min-width: 100vw;
+  padding: 20px 30px;
+  background-color: #000;
+  box-shadow: 0, 4px, 8px, rgba(0, 0, 0, 0.7);
+}
+
+.header--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hamburger {
+  margin-top: 4px;
+}
+
+input.burger-checkbox {
+  display: block;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 15px;
+  left: 27px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#hamburger .burger-span {
+  display: block;
+  position: relative;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 4px;
+  background-color: #eee;
+  border-radius: 0px;
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    backgroud 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#hamburger .burger-span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#hamburger .burger-span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#hamburger .burger-checkbox:checked~.burger-span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, -1px);
+  background-color: #eee;
+}
+
+#hamburger .burger-checkbox:checked~.burger-span:nth-last-child(1) {
+  transform: rotate(-45deg) translate(-2px, -1px);
+}
+
+#hamburger .burger-checkbox:checked~.burger-span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+a.nav-brand {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #eee;
+}
