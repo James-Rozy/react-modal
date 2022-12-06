@@ -29,18 +29,6 @@
   background-color: var(--neutral-100);
 }
 
-.header-component {
-  margin-bottom: 20px;
-  padding: 20px 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  background-color: var(--neutral-800);
-  color: var(--neutral-100);
-}
-
 .content {
   position: relative;
   z-index: 2;
@@ -57,10 +45,9 @@ button {
   cursor: pointer;
   padding: 5px 10px;
   border: none;
-  border-radius: 5px;
   background-color: var(--neutral-800);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--neutral-100);
 }
 
